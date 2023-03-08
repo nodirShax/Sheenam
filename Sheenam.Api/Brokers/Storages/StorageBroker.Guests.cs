@@ -3,7 +3,6 @@
 //Free To Use Comfort and Peace
 //===========================================================
 
-
 using Microsoft.EntityFrameworkCore;
 using Sheenam.Api.Models.Foundations.Guests;
 
