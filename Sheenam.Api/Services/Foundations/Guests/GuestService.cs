@@ -5,7 +5,6 @@
 
 using Sheenam.Api.Brokers.Storages;
 using Sheenam.Api.Models.Foundations.Guests;
-using System;
 using System.Threading.Tasks;
 
 namespace Sheenam.Api.Services.Foundations.Guests
@@ -17,9 +16,9 @@ namespace Sheenam.Api.Services.Foundations.Guests
         public GuestService(IStorageBroker storageBroker)
         {
             _storageBroker = storageBroker;
-        }   
+        }
 
-        public ValueTask<Guest> AddGuestAsync(Guest guest) =>
-            throw new NotImplementedException();
+        public async ValueTask<Guest> AddGuestAsync(Guest guest) =>
+            await _storageBroker.InsertGuestAsync(guest);
     }
 }
